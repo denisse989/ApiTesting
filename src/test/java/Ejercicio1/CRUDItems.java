@@ -47,6 +47,7 @@ public class CRUDItems {
                     .body("Content",equalTo("New Item"))
                     .body("Checked",equalTo(false))
                     .log().all();
+
             // Update
             body.put("Checked","true");
             response=given()
@@ -63,6 +64,7 @@ public class CRUDItems {
                     .body("Content",equalTo("New Item"))
                     .body("Checked",equalTo(true))
                     .log().all();
+
             // Delete
             response=given()
                     .auth()
